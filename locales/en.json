@@ -1,0 +1,23 @@
+{
+    "signIn": "Sign in",
+    "joinNow": "Join now",
+    "blog": "Blog",
+    "admin": "Admin",
+    "logout": "Logout",
+    "sign In": "Login",
+    "home": "Home",
+    "adminPanel": "Admin Panel",
+    "username": "Username",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addNew": "Add New User",
+    "moreInfo": "More Info",
+    "cancel": "Cancel",
+    "add_post": "Add Post",
+    "artGallery": "Art Gallery",
+    "bestFree": "Best & Free Arts",
+    "startT": "Start Tutorial",
+    "artwork": "Artwork"
+}
