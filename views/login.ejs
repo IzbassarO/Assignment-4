@@ -14,41 +14,80 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-        header, footer {
-            background-color: #007bff;
-            color: white;
-        }
-        footer {
-            width: 100%;
-            height: auto; 
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-        }
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav class="navbar">
-        <div class="join-box">
-            <p class="join-msg"><%= translations.joinMessage %></p>
-
-            <select name="language" id="language" onchange="changeLanguage(this.value)">
-                <option value="en" <%= language === 'en' ? 'selected' : '' %>>English</option>
-                <option value="ru" <%= language === 'ru' ? 'selected' : '' %>>Russian</option>
-            </select>
-
-            <button class="btn" onclick="location.href='/blog'"><%= translations.blog %></button>
-
-            <button class="btn join-btn" onclick="location.href='/register'"><%= translations.joinNow %></button>
-        </div>
-    </nav>
+    <header>
+      
+        <!-- Navbar -->
+        <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    
+            <div class="container">
+              <div class="row align-items-center">
+                
+                <div class="col-6 col-xl-2">
+                  <h1 class="mb-0 site-logo"><a href="/">Izbassar<span class="text-primary">.</span> </a></h1>
+                </div>
+      
+                <div class="col-12 col-md-10 d-none d-xl-block">
+                  <nav class="site-navigation position-relative text-right" role="navigation">
+      
+                    <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                      <li><a href="" class="nav-link"></a></li>
+                      <li class="has-children">
+                        <a href="/" class="nav-link"><%= translations.home %></a>
+                      </li>
+                    <li class="has-children">
+                        <a href="/blog" class="nav-link"><%= translations.blog %></a>
+                    </li>
+                    
+                    <select name="language" id="language" onchange="changeLanguage(this.value)">
+                        <option value="en" <%= language === 'en' ? 'selected' : '' %>>English</option>
+                        <option value="ru" <%= language === 'ru' ? 'selected' : '' %>>Russian</option>
+                    </select>
+                    </ul>
+                  </nav>
+                </div>
+      
+      
+                <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+      
+              </div>
+            </div>
+            
+          </header>
+        <!-- Navbar -->
+      
+        <!-- Carousel wrapper -->
+        <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-carousel-init>
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+            <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+          </div>
+      
+          <!-- Inner -->
+          <div class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                  <div class="text-white text-center" data-mdb-theme="dark">
+                    <br><br><br><br>
+                    <h2><%= translations.signIn %></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </header>
 
 	<div class="limiter">
 		<div class="container-login100">
@@ -152,6 +191,14 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
     <script>
         function changeLanguage(selectedLanguage) {
             window.location = `/?lang=${selectedLanguage}`;
