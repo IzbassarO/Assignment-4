@@ -5,7 +5,7 @@ This project is an Art Gallery Express application built with Node.js and Expres
 
 Setup:
 
-Clone the repository: git clone https://github.com/yourusername/yourrepository.git
+Clone the repository: git clone by clicking the button git clone
 Install dependencies: npm install
 Create a .env file based on .env.example and configure necessary environment variables.
 Start the server: node index.js or npm start
