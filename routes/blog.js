@@ -9,7 +9,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 // Display all blog posts
-router.get('/blog', async (req, res) => {
+router.get('/blog',ensureAuthenticated, async (req, res) => {
     try {
         const posts = await BlogPost.find({}); // You might want to add pagination
         res.render('blog', {
@@ -78,7 +78,7 @@ router.post('/admin/add-post', ensureAuthenticated, upload.fields([
 });
 
 // Route to serve images from the database
-router.get('/images/:postId/:imageField', async (req, res) => {
+router.get('/images/:postId/:imageField', ensureAuthenticated, async (req, res) => {
     try {
         const post = await BlogPost.findById(req.params.postId);
         if (!post || !post[req.params.imageField].data) {
